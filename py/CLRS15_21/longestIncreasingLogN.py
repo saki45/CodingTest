@@ -1,6 +1,7 @@
 def findLongestIncreasing(a):
-	
-	pass
+	tmp = [0 for i in range(1, len(a)+1)]
+	print(len(a), len(tmp))	
+
 
 def randomPermutation(a):
 	
