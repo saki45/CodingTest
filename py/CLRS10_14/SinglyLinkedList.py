@@ -77,6 +77,19 @@ class SinglyLinkedList:
 		self.head.nxt = None
 		self.head = p
 
+	def reverseListRecursive(self, head):
+		if head.nxt == None:
+			return head, head
+		else:
+			nh, nt = self.reverseListRecursive(head.nxt)
+			nt.nxt = head
+			head.nxt = None
+			return nh, head
+
+	def reverseListRecursiveWrapper(self):
+		self.head, tmp = self.reverseListRecursive(self.head)
+
+
 if __name__ == '__main__':
 
 	import random
@@ -87,4 +100,6 @@ if __name__ == '__main__':
 
 	lst.printList()
 	lst.reverseList()
+	lst.printList()
+	lst.reverseListRecursiveWrapper()
 	lst.printList()
