@@ -1,13 +1,10 @@
-allExec =	stringRotateCheck stringRotateCheck2
+allExec =	stringRotateCheck 
 
 all	:
 	make	$(allExec)
 
 stringRotateCheck	:	stringRotateCheck.o
 	gcc	-o	stringRotateCheck	stringRotateCheck.o
-
-stringRotateCheck2	:	stringRotateCheck2.o
-	gcc	-o	stringRotateCheck2	stringRotateCheck2.o
 
 stringTest	:	stringTest.o
 	g++	-o	stringTest	stringTest.o
